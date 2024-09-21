@@ -1,6 +1,38 @@
-*{
-    font-family: Arial, Helvetica, sans-serif;
+
+.paragraph{
+    font-family: "Handjet", system-ui;
+    color: antiquewhite;
+    font-size: 1.2em;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+        "ELGR" 1,
+        "ELSH" 2;
 }
+
+
+.nabla-heading {
+    font-family: "Nabla", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "EDPT" 100,
+      "EHLT" 12;
+}
+
+.handjet-header {
+    font-family: "Handjet", system-ui;
+    font-size: 1.2em;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "ELGR" 1,
+    "ELSH" 2;
+}
+
 .main-heading {
     /* background-color: goldenrod; */
     color: #e4e4e4;
@@ -24,8 +56,5 @@
     font-size: 2 !important;
 }
 .body-style{
-    background-color: black;
-}
-.calendar{
-    background-color: #ffffff;
+    background-color: #1d1d1d;
 }
