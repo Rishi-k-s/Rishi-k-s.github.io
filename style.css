@@ -1,47 +1,55 @@
+.body-style {
+    background-color: #1d1d1d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    height: 100vh; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.paragraph{
+
+.nabla-heading {
+    font-family: "Nabla", system-ui;
+    font-size: 2em;
+    color: #e4e4e4;
+    margin-bottom: 20px;
+}
+
+
+.links-container {
+    margin-top: 10px; 
+}
+
+a {
+    color: white; 
+    text-decoration: none; 
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #90caf9;
+}
+
+.handjet-header {
     font-family: "Handjet", system-ui;
-    color: antiquewhite;
     font-size: 1.2em;
-    font-optical-sizing: auto;
     font-weight: 500;
-    font-style: normal;
     font-variation-settings:
         "ELGR" 1,
         "ELSH" 2;
 }
 
 
-.nabla-heading {
-    font-family: "Nabla", system-ui;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:
-      "EDPT" 100,
-      "EHLT" 12;
+a + span {
+    margin-right: 20px;
 }
 
-.handjet-header {
-    font-family: "Handjet", system-ui;
-    font-size: 1.2em;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-variation-settings:
-    "ELGR" 1,
-    "ELSH" 2;
-}
-
-.main-heading {
-    /* background-color: goldenrod; */
-    color: #e4e4e4;
-}
-.sub-heading {
-    /* background-color: goldenrod; */
-    color: #e4e4e4;
-}
-.footer {
+/* Footer */
+/* .footer {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -50,11 +58,17 @@
     color: #c9c9c9;
     background-color: #111111;
     text-align: center;
-    line-height: 20px; /* This vertically centers the text if the height is 20px */
-    padding-top: 5px;
-    padding-bottom: 7px;
-    font-size: 2 !important;
-}
-.body-style{
-    background-color: #1d1d1d;
+    line-height: 20px;
+    padding: 5px 0;
+} */
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .nabla-heading {
+        font-size: 1.5em;
+    }
+
+    .handjet-header {
+        font-size: 1em;
+    }
 }
