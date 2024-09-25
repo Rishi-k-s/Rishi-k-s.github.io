@@ -1,74 +1,109 @@
+/* General body styling */
 .body-style {
     background-color: #1d1d1d;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-    height: 100vh; 
-    text-align: center;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh; /* Full height of the viewport */
+    padding: 20px;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    color: antiquewhite;
+    font-family: "Nunito Sans", sans-serif; /* Primary font for body */
 }
 
-
+/* Main heading for the blog */
 .nabla-heading {
-    font-family: "Nabla", system-ui;
-    font-size: 2em;
+    font-family: "Nabla", serif; /* Use Nabla for heading */
+    font-size: 2.2em;
+    margin-bottom: 30px;
     color: #e4e4e4;
+}
+
+/* Move each letter on hover */
+.nabla-heading span,
+.handjet-header span {
+    display: inline-block; /* Allow individual movement */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.nabla-heading span:hover,
+.handjet-header span:hover {
+    transform: translateY(-10px); /* Move up on hover */
+}
+
+/* Links styling */
+.handjet-header {
+    font-family: "Handjet", sans-serif; /* Use Handjet for links */
+    color: #f5f5f5; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.handjet-header:hover {
+    color: #90caf9; /* Change color on hover */
+}
+
+/* Blog content container */
+.blog-content {
+    max-width: 800px;
+    width: 100%;
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog title styling */
+.blog-title {
+    font-family: "Handjet", sans-serif; /* Use Handjet for blog titles */
+    font-size: 1.8em;
+    color: #f5f5f5;
+    margin-bottom: 10px;
+}
+
+/* Blog date styling */
+.blog-date {
+    font-family: "Nunito Sans", sans-serif; /* Use Nunito for blog date */
+    font-size: 0.9em;
+    color: #a9a9a9;
     margin-bottom: 20px;
 }
 
-
-.links-container {
-    margin-top: 10px; 
-}
-
-a {
-    color: white; 
-    text-decoration: none; 
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #90caf9;
-}
-
-.handjet-header {
-    font-family: "Handjet", system-ui;
-    font-size: 1.2em;
-    font-weight: 500;
-    font-variation-settings:
-        "ELGR" 1,
-        "ELSH" 2;
-}
-
-
-a + span {
-    margin-right: 20px;
+/* Blog text styling */
+.blog-text p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
 /* Footer */
-/* .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+.footer {
+    margin-top: 40px;
+    padding: 10px;
     width: 100%;
-    height: 20px;
-    color: #c9c9c9;
-    background-color: #111111;
     text-align: center;
-    line-height: 20px;
-    padding: 5px 0;
-} */
+    background-color: #111111;
+    color: #c9c9c9;
+    position: relative;
+}
+
+/* Footer link */
+.footer-link {
+    color: #90caf9;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
 
 /* Responsive layout */
 @media (max-width: 768px) {
     .nabla-heading {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
-    .handjet-header {
-        font-size: 1em;
+    .blog-title {
+        font-size: 1.5em;
     }
 }
