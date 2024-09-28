@@ -112,3 +112,60 @@ a + span {
         width: 95%;
     }
 }
+
+.blog-post-link {
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.blog-post-link:hover .blog-post {
+    background-color: #444;
+}
+
+/* Blog post content styling for individual pages */
+.blog-post-content {
+    margin: 20px 0;
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.blog-post-content article {
+    margin-bottom: 20px;
+}
+
+.blog-post-content h2 {
+    font-family: "Handjet", system-ui;
+    color: #e4e4e4;
+    margin-bottom: 10px;
+}
+
+.blog-content {
+    font-family: "Nunito Sans", sans-serif;
+    color: #c9c9c9;
+    line-height: 1.6;
+}
+
+/* Back to blog link */
+.blog-back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #90caf9;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.blog-back-link:hover {
+    color: white;
+}
+
+/* Responsive blog layout for individual pages */
+@media (max-width: 768px) {
+    .blog-post-content {
+        width: 95%;
+    }
+}
