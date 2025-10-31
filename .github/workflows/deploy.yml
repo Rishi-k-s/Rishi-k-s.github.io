@@ -16,5 +16,5 @@ jobs:
           username: ${{ secrets.DO_USER }}
           key: ${{ secrets.DO_SSH_KEY }}
           script: |
-            /var/www/Rishi-k-s.github.io
-            ./deploy.sh
+            cd /var/www/Rishi-k-s.github.io
+            bash deploy.sh
