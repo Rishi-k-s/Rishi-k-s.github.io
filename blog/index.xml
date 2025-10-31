@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Rishi Krishna | Maker  &amp; Engineer</title>
-    <link>https://rishikrishna.com/blog/</link>
+    <link>http://localhost:1313/blog/</link>
     <description>Recent content in Blogs on Rishi Krishna | Maker  &amp; Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 26 Oct 2025 01:47:25 +0530</lastBuildDate><atom:link href="https://rishikrishna.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Oct 2025 01:47:25 +0530</lastBuildDate><atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rishi Here !</title>
-      <link>https://rishikrishna.com/blog/hi/</link>
+      <link>http://localhost:1313/blog/hi/</link>
       <pubDate>Sun, 26 Oct 2025 01:47:25 +0530</pubDate>
       
-      <guid>https://rishikrishna.com/blog/hi/</guid>
+      <guid>http://localhost:1313/blog/hi/</guid>
       
       <description>&lt;p&gt;I&amp;rsquo;m starting a blog. The content will probably be mostly technical, or maybe just me writing some random stuff—I’m not sure how it’s going to turn out. Anyway, this the start&lt;/p&gt;
 &lt;p&gt;Rishi :)&lt;/p&gt;</description>
