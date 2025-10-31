@@ -1,9 +1,9 @@
 {
-    "name": "Rishi",
-    "short_name": "rishi",
+    "name": "Rishi Krishna",
+    "short_name": "Rishi",
     "start_url": "/",
     "theme_color": "#434648",
-    "background_color": "#fff",
+    "background_color": "#ffffff",
     "display": "standalone",
     "icons": [
         {

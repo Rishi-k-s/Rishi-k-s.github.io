@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://rishikrishna.com/blog/</loc>
     <lastmod>2025-10-26T01:47:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://rishikrishna.com/</loc>
     <lastmod>2025-10-26T01:47:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/hi/</loc>
+    <loc>https://rishikrishna.com/blog/hi/</loc>
     <lastmod>2025-10-26T01:47:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://rishikrishna.com/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://rishikrishna.com/tags/</loc>
   </url>
 </urlset>
