@@ -2,47 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/projects/esp32-emulation-qemu/</loc>
+    <loc>https://rishikrishna.com/</loc>
     <lastmod>2025-11-07T23:17:28+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://rishikrishna.com/projects/</loc>
     <lastmod>2025-11-07T23:17:28+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/</loc>
-    <lastmod>2025-11-07T23:17:28+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/talk/</loc>
+    <loc>https://rishikrishna.com/talk/</loc>
     <lastmod>2025-11-07T14:50:30+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/talks/iti-maneed/</loc>
+    <loc>https://rishikrishna.com/talks/iti-maneed/</loc>
     <lastmod>2025-11-07T14:34:48+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/talks/</loc>
+    <loc>https://rishikrishna.com/talks/</loc>
     <lastmod>2025-11-07T14:34:48+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/pages/</loc>
+    <loc>https://rishikrishna.com/pages/</loc>
     <lastmod>2025-11-07T14:02:11+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/pages/about/</loc>
+    <loc>https://rishikrishna.com/pages/about/</loc>
     <lastmod>2025-11-07T14:02:11+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/selfhosting-mayavi/</loc>
+    <loc>https://rishikrishna.com/projects/selfhosting-mayavi/</loc>
     <lastmod>2025-11-07T14:02:11+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://rishikrishna.com/blog/</loc>
     <lastmod>2025-10-26T01:47:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/hi/</loc>
+    <loc>https://rishikrishna.com/blog/hi/</loc>
     <lastmod>2025-10-26T01:47:25+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/talks/home-automation-class-nine/</loc>
+    <loc>https://rishikrishna.com/talks/home-automation-class-nine/</loc>
     <lastmod>2019-11-07T11:34:04+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/projects/car-class-seven/</loc>
+    <loc>https://rishikrishna.com/projects/car-class-seven/</loc>
     <lastmod>2018-11-07T11:39:16+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://rishikrishna.com/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://rishikrishna.com/tags/</loc>
   </url>
 </urlset>
