@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Rishi Krishna | Maker  &amp; Engineer</title>
-    <link>https://rishikrishna.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on Rishi Krishna | Maker  &amp; Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 07 Nov 2025 14:50:30 +0530</lastBuildDate><atom:link href="https://rishikrishna.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Nov 2025 23:17:28 +0530</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Iti Maneed</title>
-      <link>https://rishikrishna.com/talks/iti-maneed/</link>
+      <link>http://localhost:1313/talks/iti-maneed/</link>
       <pubDate>Fri, 07 Nov 2025 14:34:48 +0530</pubDate>
       
-      <guid>https://rishikrishna.com/talks/iti-maneed/</guid>
+      <guid>http://localhost:1313/talks/iti-maneed/</guid>
       
-      <description>&lt;p&gt;find the ppt&amp;rsquo;s &lt;a href=&#34;../../files/Intro-to-iot.pdf&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;find the ppt&amp;rsquo;s &lt;a href=&#34;http://localhost:1313/files/Intro-to-iot.pdf&#34;&gt;here&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>Rishi Krishna // ഋഷി കൃഷ്ണ</title>
-      <link>https://rishikrishna.com/pages/about/</link>
+      <link>http://localhost:1313/pages/about/</link>
       <pubDate>Fri, 07 Nov 2025 14:02:11 +0530</pubDate>
       
-      <guid>https://rishikrishna.com/pages/about/</guid>
+      <guid>http://localhost:1313/pages/about/</guid>
       
       <description>&lt;p&gt;I am that guy who&lt;/p&gt;</description>
       
@@ -31,10 +31,10 @@
     
     <item>
       <title>Selfhosting: own your own megam??</title>
-      <link>https://rishikrishna.com/projects/selfhosting-mayavi/</link>
+      <link>http://localhost:1313/projects/selfhosting-mayavi/</link>
       <pubDate>Fri, 07 Nov 2025 14:02:11 +0530</pubDate>
       
-      <guid>https://rishikrishna.com/projects/selfhosting-mayavi/</guid>
+      <guid>http://localhost:1313/projects/selfhosting-mayavi/</guid>
       
       <description>&lt;p&gt;I wanted to write this for a long timeeee&lt;/p&gt;</description>
       
@@ -42,10 +42,10 @@
     
     <item>
       <title>Rishi Here !</title>
-      <link>https://rishikrishna.com/blog/hi/</link>
+      <link>http://localhost:1313/blog/hi/</link>
       <pubDate>Sun, 26 Oct 2025 01:47:25 +0530</pubDate>
       
-      <guid>https://rishikrishna.com/blog/hi/</guid>
+      <guid>http://localhost:1313/blog/hi/</guid>
       
       <description>&lt;p&gt;I&amp;rsquo;m starting a blog. The content will probably be mostly technical, or maybe just me writing some random stuff—I’m not sure how it’s going to turn out.&lt;/p&gt;
 &lt;p&gt;Hereee we gooooooooo !!!&lt;/p&gt;
@@ -55,10 +55,10 @@
     
     <item>
       <title>Home Automation V2</title>
-      <link>https://rishikrishna.com/talks/home-automation-class-nine/</link>
+      <link>http://localhost:1313/talks/home-automation-class-nine/</link>
       <pubDate>Thu, 07 Nov 2019 11:34:04 +0530</pubDate>
       
-      <guid>https://rishikrishna.com/talks/home-automation-class-nine/</guid>
+      <guid>http://localhost:1313/talks/home-automation-class-nine/</guid>
       
       <description>&lt;blockquote&gt;
 &lt;p&gt;TBH i think i should be writing this when i was in class 9 lmaooo&lt;/p&gt;
@@ -69,10 +69,10 @@
     
     <item>
       <title>The Bluetooth car: the cliche starter project</title>
-      <link>https://rishikrishna.com/projects/car-class-seven/</link>
+      <link>http://localhost:1313/projects/car-class-seven/</link>
       <pubDate>Wed, 07 Nov 2018 11:39:16 +0530</pubDate>
       
-      <guid>https://rishikrishna.com/projects/car-class-seven/</guid>
+      <guid>http://localhost:1313/projects/car-class-seven/</guid>
       
       <description>&lt;blockquote&gt;
 &lt;p&gt;The bluetooth car is equivalent to volcano in science fair like there are soo many of them, but still its a starting project&lt;/p&gt;
