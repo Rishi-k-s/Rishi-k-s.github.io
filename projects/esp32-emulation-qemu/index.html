@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<html lang="en-gb"><head><meta charset="utf-8">
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en-gb" />
 <meta name="language" content="en-gb" />
 
-  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/projects/esp32-emulation-qemu/" title="" />
+  <link rel="alternate" hreflang="en-gb" href="https://rishikrishna.com/projects/esp32-emulation-qemu/" title="" />
 
 
 
@@ -28,7 +28,7 @@
 <meta name="generator" content="Hugo 0.152.2">
 
     
-    <meta property="og:url" content="http://localhost:1313/projects/esp32-emulation-qemu/">
+    <meta property="og:url" content="https://rishikrishna.com/projects/esp32-emulation-qemu/">
   <meta property="og:site_name" content="Rishi Krishna | Maker  & Engineer">
   <meta property="og:title" content="ESP32 Emulation from Scratch using QEMU">
   <meta property="og:description" content="We are Setting up a ESP32 Emulation in QEMU(QuickEMUlator), to write and compile the program we need ESP-IDF, which is an SDK provided by Espressif for ESP32 chipsets, so first we write and compile the programs in ESP-IDF then we use QEMU to emulate it, the end goal of this is to integrate this with Yaksh:Python based evaluation platform by FOSSEE so that we can test if the program is correct or not via the platform. Make sure you have pretty good internet connection as we are gonna download multiple repositories">
@@ -48,7 +48,7 @@
 
     
 
-    <link rel="canonical" href="http://localhost:1313/projects/esp32-emulation-qemu/">
+    <link rel="canonical" href="https://rishikrishna.com/projects/esp32-emulation-qemu/">
     <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
@@ -62,7 +62,7 @@
 
 
 
-<link rel="manifest" href="http://localhost:1313/site.webmanifest">
+<link rel="manifest" href="https://rishikrishna.com/site.webmanifest">
 
 <meta name="msapplication-config" content="/browserconfig.xml">
 <meta name="msapplication-TileColor" content="#2d89ef">
@@ -73,14 +73,15 @@
 
     
     
+    
 </head>
 <body data-theme = "light" class="notransition">
 
-<script src="/js/theme.js"></script>
+<script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
 
 <div class="navbar" role="navigation">
     <nav class="menu" aria-label="Main Navigation">
-        <a href="http://localhost:1313/" class="logo">
+        <a href="https://rishikrishna.com/" class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
 stroke-linejoin="round" class="feather feather-home">
@@ -177,12 +178,17 @@ stroke-linejoin="round" class="feather feather-home">
         <li><a href="#qemu">QEMU</a></li>
       </ul>
     </li>
-    <li><a href="#step-4-program-1-hello-world">Step 4: Program 1: Hello World</a></li>
+    <li><a href="#demo-1-hello-world">Demo 1: Hello World</a></li>
+    <li><a href="#demo-2-blinking-led">Demo 2: Blinking LED</a></li>
+    <li><a href="#demo-3-simulating-temperature-sensor">Demo 3: Simulating Temperature Sensor</a></li>
+    <li><a href="#running-qemu-in-headless-mode-for-yaksh-most-important-section">Running QEMU In Headless-mode: for Yaksh (Most Important Section)</a></li>
+    <li><a href="#reflection-integrating-with-yaksh">Reflection: Integrating with Yaksh</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
     </details>
             <div class="page-content">
-                <p>We are Setting up a ESP32 Emulation in QEMU(QuickEMUlator), to write and compile the program we need ESP-IDF, which is an SDK provided by Espressif for ESP32 chipsets, so first we write and compile the programs in ESP-IDF then we use QEMU to emulate it, the end goal of this is to integrate this with Yaksh:Python based evaluation platform by FOSSEE so that we can test if the program is correct or not via the platform. <br>
+                <p>We are Setting up a ESP32 Emulation in <strong>QEMU(QuickEMUlator)</strong>, to write and compile the program we need <strong>ESP-IDF</strong>, which is an SDK provided by Espressif for ESP32 chipsets, so first we write and compile the programs in ESP-IDF then we use QEMU to emulate it, the end goal of this is to integrate this with <strong>Yaksh</strong>:Python based evaluation platform by FOSSEE so that we can test if the program is correct or not via the platform. <br>
 Make sure you have pretty <strong>good internet connection</strong> as we are gonna download multiple repositories</p>
 <h2 id="os-config-my-pc">OS Config (my pc)</h2>
 <ul>
@@ -274,14 +280,14 @@ Copy and paste the following command to your shell&rsquo;s profile (.profile, .b
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>alias get_idf<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;. $HOME/esp/esp-idf/export.sh&#39;</span>
 </span></span></code></pre></div><p>then do</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source .bashrc
-</span></span></code></pre></div><p>Yay we downloaded and installed QEMU and ESP-IDF, now if we enter</p>
+</span></span></code></pre></div><p>Yay we downloaded and installed ESP-IDF, now if we enter</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>get_idf
 </span></span></code></pre></div><p>in terminal it activates ESP-IDF if that directory
 <img src="/files/image.png" alt="just running esp idf"></p>
-<p>now to get the ESP-IDF version, we need to enter these commands into terminal</p>
+<p>now to get the ESP-IDF version, we need to enter this commands into terminal:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>idf.py --version <span style="color:#75715e">#this should be done after entering get_idf</span>
 </span></span></code></pre></div><p><img src="/files/esp-idf-new.png" alt="After selecting esp idf version">
-which gives</p>
+which gives the output</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ESP-IDF v5.5.1
 </span></span></code></pre></div><h3 id="qemu">QEMU</h3>
 <ul>
@@ -306,13 +312,251 @@ To use QEMU with idf.py, you first need to install the above-mentioned fork of Q
 </span></span></code></pre></div><blockquote>
 <p>For those who have already installed QEMU via apt repositories, this does not cause a conflict, you can continue with this installation&hellip;</p>
 </blockquote>
-<p>if you see something like this, then it&rsquo;s successful
-<img src="/files/qemu-esp-32-v.png" alt="QEMU- ESP-IDF installation">
-now we move on to creating project with ESP-IDF and emulating it with QEMU for ESP 32 <br>
-<strong>We have Successfully Installed QEMU for ESP32 and ESP-IDF in our system</strong></p>
-</li>
+<p>to check if the installation is successful, enter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python $IDF_PATH/tools/idf_tools.py list | grep qemu <span style="color:#75715e"># use the terminal with get_idf</span>
+</span></span></code></pre></div><p>if the output is similar to the one given below, you have successfully installed QEMU for ESP-IDF</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>* qemu-xtensa: QEMU <span style="color:#66d9ef">for</span> Xtensa <span style="color:#f92672">(</span>optional<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>* qemu-riscv32: QEMU <span style="color:#66d9ef">for</span> RISC-V <span style="color:#f92672">(</span>optional<span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 </ul>
-<h2 id="step-4-program-1-hello-world">Step 4: Program 1: Hello World</h2>
+<p>now we move on to creating project with ESP-IDF and emulating it with QEMU for ESP 32 <br>
+<strong>We have Successfully Installed QEMU for ESP32 and ESP-IDF in our system</strong></p>
+<blockquote>
+<p>Note: QEMU for ESP32 emulates CPU and core peripherals, but not physical GPIO behavior.</p>
+</blockquote>
+<h2 id="demo-1-hello-world">Demo 1: Hello World</h2>
+<p>Now since all requirements are met, the next topic will guide you on how to start your first project, here also im using the official Espressif&rsquo;s documentation, you can find it <a href="https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/linux-macos-setup.html#step-5-first-steps-on-esp-idf">here</a></p>
+<p>This guide helps you on the first steps using ESP-IDF. Follow this guide to start a new project on the ESP32 and build, flash, and monitor the device output.</p>
+<p>Now you are ready to prepare your application for ESP32. You can start with <a href="https://github.com/espressif/esp-idf/tree/v5.5.1/examples/get-started/hello_world">get-started/hello_world</a> project from <a href="https://github.com/espressif/esp-idf/tree/v5.5.1/examples">examples</a> directory in ESP-IDF.</p>
+<p>So basically esp-idf comes with some basic programs.. we are going to run one of them called <code>hello world</code><br>
+lets create a working directory via:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir ~/esp-hello-world
+</span></span><span style="display:flex;"><span>cd ~/esp-hello-world
+</span></span><span style="display:flex;"><span>get_idf
+</span></span></code></pre></div><p>now lets copy the hello world example from the <code>~/esp/esp-idf/examples/get-started/hello_world</code> to the current working directory</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cp -r $IDF_PATH/examples/get-started/hello_world . <span style="color:#75715e"># This should be done inside esp-hello-world folder</span>
+</span></span><span style="display:flex;"><span>cd hello_world
+</span></span></code></pre></div><p>Now lets build the project, for that we need to set the target device, in our case, its <code>esp32</code> and build it</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>idf.py set-target esp32
+</span></span><span style="display:flex;"><span>idf.py build
+</span></span></code></pre></div><p>Now here is the difference between running on a physical esp32 and in QEMU, if we was using a physical devboard we would have used command <code>idf.py -p PORT flash</code> but in this case we launch it via QEMU:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>idf.py qemu monitor <span style="color:#75715e">#Starts QEMU and attaches the ESP-IDF monitor to it</span>
+</span></span></code></pre></div><blockquote>
+<p>NOTE:  To exit the emulation use <code>CTRL + ]</code></p>
+</blockquote>
+<p>now this will run the program in QEMU successfully, it looks like
+<img src="/files/hello-world-success.png" alt="Hello World simulation"></p>
+<h2 id="demo-2-blinking-led">Demo 2: Blinking LED</h2>
+<p>Now that everything is working fine lets start a new project from scratch, to blink an LED, I am believing that you have a bit of background in ESP32 and how its GPIO&rsquo;s work, if not <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/gpio.html">here</a> is a link to that.<br>
+So we are going to attach an LED on GPIO 2 and Turn it ON wait for 1000ms(1 second) then turn it OFF then wait for another 1000ms(1 second) until i end the program, or like a loop.<br>
+first lets get started with initializing a simple project, i am using the same workspace directory as before(from Step:4):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/esp-hello-world
+</span></span><span style="display:flex;"><span>get_idf
+</span></span><span style="display:flex;"><span>idf.py create-project led_blink
+</span></span></code></pre></div><p>now move into <code>main</code> directory inside <code>led_blink</code>, enter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd led_blink/main
+</span></span><span style="display:flex;"><span>ls
+</span></span></code></pre></div><p>It shows these files as output
+<img src="/files/led-blink-file.png" alt="LED blink basic"></p>
+<p>now We need to edit the <code>led_blink.c</code> file, it is the root file or like the main file of the project.<br>
+open this in any of your liked text editors like nvim, vs-code, nano etc&hellip; we are using nano text editor as it comes inbuilt with Ubuntu/Debian systems and is easy to use.<br>
+Copy the below code snippet into the file <code>led_blink.c</code>, you can do this by:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano led_blink.c <span style="color:#75715e"># in the led_blink/main directory</span>
+</span></span></code></pre></div><blockquote>
+<p>NOTE: Remove any lines of code currently in the file led_blink.c</p>
+</blockquote>
+<p>Then copy the Code snippet below and paste it into the nano window via <code>Ctrl+Shift+v</code> Key combination</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;freertos/FreeRTOS.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;freertos/task.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;driver/gpio.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define BLINK_GPIO 10   </span><span style="color:#75715e">//Using GPIO 10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">app_main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">gpio_reset_pin</span>(BLINK_GPIO);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">gpio_set_direction</span>(BLINK_GPIO, GPIO_MODE_OUTPUT);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">gpio_set_level</span>(BLINK_GPIO, <span style="color:#ae81ff">1</span>);  <span style="color:#75715e">// LED ON
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">vTaskDelay</span>(<span style="color:#ae81ff">1000</span> <span style="color:#f92672">/</span> portTICK_PERIOD_MS);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">gpio_set_level</span>(BLINK_GPIO, <span style="color:#ae81ff">0</span>);  <span style="color:#75715e">// LED OFF
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">vTaskDelay</span>(<span style="color:#ae81ff">1000</span> <span style="color:#f92672">/</span> portTICK_PERIOD_MS);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>after copying we need to save the file and exit from nano hence:</p>
+<blockquote>
+<p><strong>Important:</strong><br>
+To save the file in nano enter: <code>Ctrl+o</code><br>
+After that to exit nano: <code>Ctrl+x</code></p>
+</blockquote>
+<p>now make sure you are in the project directory, not in the main directory</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ..
+</span></span></code></pre></div><p>Now we need to do the steps we have previously done, build and run in QEMU,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>idf.py build
+</span></span><span style="display:flex;"><span>idf.py qemu monitor
+</span></span></code></pre></div><p>After running this you might end up with someting like
+<img src="/files/blink-no-wrk.png" alt="Blink No work">
+So <strong>i can&rsquo;t see an LED lightup</strong>, but its actually happening, as we are not connected to the hardware we cannot see physical GPIO&rsquo;s to see the ON/OFF commands <strong>we need to add Logging into the program</strong>&hellip;or we could do it in a more simpler way via <code>printf</code> which will be demonstrated in the <a href="http://localhost:1313/projects/esp32-emulation-qemu/#step-6-program-3-simulating-temperature-sensor">next prorgam</a> so once again go to <code>/main/led_blink.c</code> and edit the file via <strong>nano</strong>, if you want you can remove the previous code snipped and add this or add the newly added lines</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;freertos/FreeRTOS.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;freertos/task.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;driver/gpio.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;esp_log.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define BLINK_GPIO 10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>TAG <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;blink&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">app_main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">gpio_reset_pin</span>(BLINK_GPIO);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">gpio_set_direction</span>(BLINK_GPIO, GPIO_MODE_OUTPUT);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">gpio_set_level</span>(BLINK_GPIO, <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">ESP_LOGI</span>(TAG, <span style="color:#e6db74">&#34;LED ON&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">vTaskDelay</span>(<span style="color:#ae81ff">1000</span> <span style="color:#f92672">/</span> portTICK_PERIOD_MS);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">gpio_set_level</span>(BLINK_GPIO, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">ESP_LOGI</span>(TAG, <span style="color:#e6db74">&#34;LED OFF&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">vTaskDelay</span>(<span style="color:#ae81ff">1000</span> <span style="color:#f92672">/</span> portTICK_PERIOD_MS);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
+<p><strong>Important: Use this code snippet or else you might not get the correct output</strong></p>
+</blockquote>
+<p>Now you will be seeing
+<img src="/files/blink-working.png" alt="Blinking LED working">
+YAY ! We successfully done blinking LED in QEMU via ESP-IDF</p>
+<h2 id="demo-3-simulating-temperature-sensor">Demo 3: Simulating Temperature Sensor</h2>
+<p>Here eveything is similar to what we have done before, but rather than using Logging, we are going to use a simple printf, but it also have its disadvantages, like timestamps wont be there, also if we want to do advanced log filtering it cant be done, but if we just want simple output without all the advanced things we can use <code>printf</code>.<br>
+now coming back to the program, first lets create a new program in the workspace</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/esp-hello-world
+</span></span><span style="display:flex;"><span>get_idf <span style="color:#75715e"># ensuring that ESP-IDF is running in the current directory</span>
+</span></span><span style="display:flex;"><span>idf.py create-project temp_simulate
+</span></span><span style="display:flex;"><span>cd temp_simulate
+</span></span></code></pre></div><p>Now that we are in the project directory, add the code snippet below into <code>temp_simulate/main/temp_simulate.c</code>,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano main/temp_simulate.c
+</span></span></code></pre></div><p>Here we are using an actual sensor, we should be changing the <code>read_temperature_sensor</code> to read vales from the actual sensor and rest of the code remains the same&hellip;.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;time.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;freertos/FreeRTOS.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;freertos/task.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;driver/gpio.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define TEMP_SENSOR_GPIO 4  </span><span style="color:#75715e">// pretend sensor pin (e.g. GPIO4)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Simulated function to &#34;read&#34; from GPIO
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> <span style="color:#a6e22e">read_temperature_sensor</span>(<span style="color:#66d9ef">void</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// In a real sensor: read analog/digital data here
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// For simulation, generate random readings
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> raw_value <span style="color:#f92672">=</span> <span style="color:#a6e22e">rand</span>() <span style="color:#f92672">%</span> <span style="color:#ae81ff">1024</span>;  <span style="color:#75715e">// simulate ADC value (0–1023)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">float</span> voltage <span style="color:#f92672">=</span> (raw_value <span style="color:#f92672">/</span> <span style="color:#ae81ff">1023.0</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">3.3</span>;  <span style="color:#75715e">// 0–3.3V
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">float</span> temperature <span style="color:#f92672">=</span> (voltage <span style="color:#f92672">/</span> <span style="color:#ae81ff">3.3</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">100.0</span>; <span style="color:#75715e">// scale to 0–100°C (example)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> temperature;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">app_main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">srand</span>(<span style="color:#a6e22e">time</span>(NULL));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Configure the GPIO pin (input mode)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">gpio_config_t</span> io_conf <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        .pin_bit_mask <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1ULL</span> <span style="color:#f92672">&lt;&lt;</span> TEMP_SENSOR_GPIO),
+</span></span><span style="display:flex;"><span>        .mode <span style="color:#f92672">=</span> GPIO_MODE_INPUT,
+</span></span><span style="display:flex;"><span>        .pull_up_en <span style="color:#f92672">=</span> GPIO_PULLUP_DISABLE,
+</span></span><span style="display:flex;"><span>        .pull_down_en <span style="color:#f92672">=</span> GPIO_PULLDOWN_DISABLE,
+</span></span><span style="display:flex;"><span>        .intr_type <span style="color:#f92672">=</span> GPIO_INTR_DISABLE
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">gpio_config</span>(<span style="color:#f92672">&amp;</span>io_conf);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Temperature sensor initialized on GPIO %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, TEMP_SENSOR_GPIO);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">float</span> temp <span style="color:#f92672">=</span> <span style="color:#a6e22e">read_temperature_sensor</span>();
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Temperature from sensor (GPIO %d): %.2f°C</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, TEMP_SENSOR_GPIO, temp);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">vTaskDelay</span>(<span style="color:#a6e22e">pdMS_TO_TICKS</span>(<span style="color:#ae81ff">2000</span>)); <span style="color:#75715e">// read every 2s
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>now lets build and run this in QEMU, its same as we have done previously</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>idf.py set-target esp32
+</span></span><span style="display:flex;"><span>idf.py build
+</span></span><span style="display:flex;"><span>idf.py qemu monitor
+</span></span></code></pre></div><p>Which gives the output:
+<img src="/files/temp-one-out-succes.png" alt="Temperature sensor output"></p>
+<p>Now if we want to make the program simpler, because we are only simulating the values you can copy the code below to make the simulation simpler by just creating a random number between 20 and 35, also congratulations on making it till here.</p>
+<blockquote>
+<p><strong>NOTE</strong>: to delete the entire program without deleting the file you can use the command <code>echo &quot;&quot; &gt; main/temp_simulate.c</code></p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;time.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;freertos/FreeRTOS.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;freertos/task.h&#34;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">app_main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">srand</span>(<span style="color:#a6e22e">time</span>(NULL));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">float</span> temp <span style="color:#f92672">=</span> <span style="color:#ae81ff">20.0</span> <span style="color:#f92672">+</span> (<span style="color:#a6e22e">rand</span>() <span style="color:#f92672">%</span> <span style="color:#ae81ff">1500</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">100.0</span>; <span style="color:#75715e">// 20.00°C to 35.00°C
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Simulated Temperature: %.2f°C</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, temp);
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">vTaskDelay</span>(<span style="color:#a6e22e">pdMS_TO_TICKS</span>(<span style="color:#ae81ff">2000</span>)); <span style="color:#75715e">// delay 2 seconds
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>now lets build and run this in QEMU, its same as we have done previously</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>idf.py set-target esp32
+</span></span><span style="display:flex;"><span>idf.py build
+</span></span><span style="display:flex;"><span>idf.py qemu monitor
+</span></span></code></pre></div><p>We get similar output
+<img src="/files/temp-new-output.png" alt="Get the new temperature data"></p>
+<p><strong>YAY !!! We have successfully completed Setting up ESP-IDF and integrating QEMU with it and ran multiple programs with it</strong></p>
+<h2 id="running-qemu-in-headless-mode-for-yaksh-most-important-section">Running QEMU In Headless-mode: for Yaksh (Most Important Section)</h2>
+<p>I am using this <a href="https://github.com/Ebiroll/qemu_esp32/blob/master/README.md?utm_source=chatgpt.com">Reference</a>.<br>
+Till now we have been running <code>idf.py qemu</code> for emulation, but our end goal is to run this on Yaksh, hence we need to run QEMU in headless mode to have more control over what is happening and make it easy to run in Yaksh&rsquo;s backend<br>
+for that first let go the   <code>temp_simulate</code> project inside the <code>~/esp-hello-world</code> workspace :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/esp-hello-world/temp_simulate
+</span></span><span style="display:flex;"><span>get_idf
+</span></span><span style="display:flex;"><span>idf.py build
+</span></span></code></pre></div><p>now we can check the build directory by:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls build
+</span></span></code></pre></div><p><img src="/files/yaksh-build-happening.png" alt="Yaksh Build process">
+Here we can see the <code>bootloader</code>, <code>partition_table</code> directories and <code>temp_simulate.bin</code> we need to combine these three to create a proper SPI flash image (with bootloader + partitions + app), we can do this via:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>esptool.py --chip esp32 merge_bin -o build/flash_image.bin <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  0x1000 build/bootloader/bootloader.bin <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  0x8000 build/partition_table/partition-table.bin <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  0x10000 build/temp_simulate.bin
+</span></span></code></pre></div><blockquote>
+<p><strong>WARNING !</strong>: Make sure you are in the project directory when running this, in this case its <code>~/esp-hello-world/temp_simulate</code><br>
+<strong>NOTE: This process is same for all programs, ony thing you have to change is the build/{program_name} in line 4</strong></p>
+</blockquote>
+<p>This command creates build/flash_image.bin — a valid 4 MB flash image (bootloader + partition table + firmware).<br>
+Just to be on the safer side we are going to <strong>pad this image</strong> <code>flash_image.bin</code> into 4MB by:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>truncate -s 4M build/flash_image.bin
+</span></span></code></pre></div><p>Now we can successfully run this in QEMU by:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qemu-system-xtensa -nographic -machine esp32 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -drive file<span style="color:#f92672">=</span>build/flash_image.bin,if<span style="color:#f92672">=</span>mtd,format<span style="color:#f92672">=</span>raw
+</span></span></code></pre></div><p>which gives the output:
+<img src="/files/final-qemu-output.png" alt="QEMU in headless mode"></p>
+<blockquote>
+<p>TO exit from this session you have to use <code>Ctrl+a</code> then click <code>x</code></p>
+</blockquote>
+<h2 id="reflection-integrating-with-yaksh">Reflection: Integrating with Yaksh</h2>
+<p>From the previous step we have more control over running in QEMU hence we could store its output in a text file and analyze it in the Yaksh backend with simple bash commands like:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qemu-system-xtensa -nographic -machine esp32 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -drive file<span style="color:#f92672">=</span>build/flash_image.bin,if<span style="color:#f92672">=</span>mtd,format<span style="color:#f92672">=</span>raw &gt; output.txt
+</span></span></code></pre></div><p>Here i saved the program into an <code>output.txt</code> file, i could  <code>grep</code> into the output file to check if the desired output is present or not&hellip;
+Now the workflow would be:</p>
+<ol>
+<li>A student submits ESP-IDF source code on Yaksh.</li>
+<li>A Python based grader script automatically builds the code using idf.py build, generating an ELF binary and corresponding flash image.</li>
+<li>The flash image is executed inside QEMU in headless mode the above commands</li>
+<li>The console output (produced by printf() or ESP_LOGI()) is captured by Yaksh.</li>
+<li>The grader compares this output against expected results to determine correctness.</li>
+</ol>
+<p>This approach enables fully automated and hardware-independent testing of embedded programs. It ensures fairness, reproducibility, and scalability</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Through this guide, we successfully set up a complete ESP32 emulation environment using QEMU and ESP-IDF, enabling us to build, compile, and run embedded applications entirely in software. By walking through progressively complex demos ranging from Hello World to LED Blinking and a Simulated Temperature Sensor, we demonstrated how real ESP32 programs can execute seamlessly on a virtual device. Finally, by running QEMU in headless mode, we established a foundation for integrating with Yaksh, allowing automated evaluation of embedded code submissions.</p>
 
             </div>
         </article></main>
@@ -435,7 +679,7 @@ now we move on to creating project with ESP-IDF and emulating it with QEMU for E
 
 
     
-    <script async src="http://localhost:1313/js/main.js" ></script>
+    <script src="https://rishikrishna.com/js/main.min.35f435a5d8eac613c52daa28d8af544a4512337d3e95236e4a4978417b8dcb2f.js" integrity="sha256-NfQ1pdjqxhPFLaoo2K9USkUSM30&#43;lSNuSkl4QXuNyy8="></script>
 
     
 
