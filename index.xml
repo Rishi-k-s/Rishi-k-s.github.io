@@ -8,18 +8,6 @@
     <language>en-gb</language>
     <lastBuildDate>Fri, 07 Nov 2025 23:17:28 +0530</lastBuildDate><atom:link href="https://rishikrishna.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ESP32 Emulation from Scratch using QEMU</title>
-      <link>https://rishikrishna.com/projects/esp32-emulation-qemu/</link>
-      <pubDate>Fri, 07 Nov 2025 23:17:28 +0530</pubDate>
-      
-      <guid>https://rishikrishna.com/projects/esp32-emulation-qemu/</guid>
-      
-      <description>&lt;p&gt;We are Setting up a ESP32 Emulation in &lt;strong&gt;QEMU(QuickEMUlator)&lt;/strong&gt;, to write and compile the program we need &lt;strong&gt;ESP-IDF&lt;/strong&gt;, which is an SDK provided by Espressif for ESP32 chipsets, so first we write and compile the programs in ESP-IDF then we use QEMU to emulate it, the end goal of this is to integrate this with &lt;strong&gt;Yaksh&lt;/strong&gt;:Python based evaluation platform by FOSSEE so that we can test if the program is correct or not via the platform. &lt;br&gt;
-Make sure you have pretty &lt;strong&gt;good internet connection&lt;/strong&gt; as we are gonna download multiple repositories&lt;/p&gt;</description>
-      
-    </item>
-    
-    <item>
       <title>Iti Maneed</title>
       <link>https://rishikrishna.com/talks/iti-maneed/</link>
       <pubDate>Fri, 07 Nov 2025 14:34:48 +0530</pubDate>
