@@ -6,7 +6,28 @@
     <description>Recent content in Home on Rishi Krishna | Maker  &amp; Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 07 Nov 2025 23:17:28 +0530</lastBuildDate><atom:link href="https://rishikrishna.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Nov 2025 01:18:32 +0530</lastBuildDate><atom:link href="https://rishikrishna.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting Up Remote Server With Cloudflare</title>
+      <link>https://rishikrishna.com/blog/setting-up-remote-server-with-cloudflare/</link>
+      <pubDate>Sun, 16 Nov 2025 01:18:32 +0530</pubDate>
+      
+      <guid>https://rishikrishna.com/blog/setting-up-remote-server-with-cloudflare/</guid>
+      
+      <description>&lt;p&gt;Setting up remote cloudflare server to connect host via remote device&lt;br&gt;
+Local Machine - The device in you have&lt;br&gt;
+Remote Machine - The server (preferably in your home)&lt;/p&gt;
+&lt;h2 id=&#34;step-1-installing-docker-in-remote-machine&#34;&gt;Step 1: Installing Docker in Remote Machine&lt;/h2&gt;
+&lt;p&gt;follow these instruction to install docker in remote machine
+&lt;a href=&#34;https://docs.docker.com/engine/install/&#34;&gt;Installing Docker&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;step-2-signing-up-to-cloudflare-and-setting-up-domain-local-machine&#34;&gt;Step 2: Signing up, to cloudflare and setting up domain (local machine)&lt;/h2&gt;
+&lt;p&gt;login to cloudflare dashboard via &lt;a href=&#34;https://dash.cloudflare.com/&#34;&gt;dash.cloudflare.com&lt;/a&gt; and an account via your email
+&lt;img src=&#34;https://rishikrishna.com/files/remoteserver/cloudfare-connectiong.png&#34; alt=&#34;cloudfare-connectiong&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;NOTE: You need to have a &lt;strong&gt;domain&lt;/strong&gt; with you to do all these btw&amp;hellip;&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Iti Maneed</title>
       <link>https://rishikrishna.com/talks/iti-maneed/</link>
