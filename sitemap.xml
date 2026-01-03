@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://rishikrishna.com/blog/</loc>
-    <lastmod>2025-11-16T01:18:32+05:30</lastmod>
-  </url><url>
     <loc>https://rishikrishna.com/</loc>
+    <lastmod>2025-11-23T15:52:57+05:30</lastmod>
+  </url><url>
+    <loc>https://rishikrishna.com/projects/</loc>
+    <lastmod>2025-11-23T15:52:57+05:30</lastmod>
+  </url><url>
+    <loc>https://rishikrishna.com/blog/</loc>
     <lastmod>2025-11-16T01:18:32+05:30</lastmod>
   </url><url>
     <loc>https://rishikrishna.com/blog/setting-up-remote-server-with-cloudflare/</loc>
     <lastmod>2025-11-16T01:18:32+05:30</lastmod>
   </url><url>
-    <loc>https://rishikrishna.com/projects/</loc>
+    <loc>https://rishikrishna.com/projects/esp32-emulation-qemu/</loc>
     <lastmod>2025-11-07T23:17:28+05:30</lastmod>
   </url><url>
     <loc>https://rishikrishna.com/talk/</loc>
