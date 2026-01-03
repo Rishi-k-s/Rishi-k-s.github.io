@@ -22,9 +22,15 @@ Remote Machine - The server (preferably in your home)&lt;/p&gt;
 &lt;a href=&#34;https://docs.docker.com/engine/install/&#34;&gt;Installing Docker&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;step-2-signing-up-to-cloudflare-and-setting-up-domain-local-machine&#34;&gt;Step 2: Signing up, to cloudflare and setting up domain (local machine)&lt;/h2&gt;
 &lt;p&gt;login to cloudflare dashboard via &lt;a href=&#34;https://dash.cloudflare.com/&#34;&gt;dash.cloudflare.com&lt;/a&gt; and an account via your email
-&lt;img src=&#34;https://rishikrishna.com/files/remoteserver/cloudfare-connectiong.png&#34; alt=&#34;cloudfare-connectiong&#34;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;NOTE: You need to have a &lt;strong&gt;domain&lt;/strong&gt; with you to do all these btw&amp;hellip;&lt;/p&gt;</description>
+&lt;a href=&#34;https://rishikrishna.com/files/remoteserver/cloudfare-connectiong.png&#34; data-lightbox=&#34;post-gallery&#34; data-title=&#34;cloudfare-connectiong&#34;&gt;
+  &lt;img 
+    src=&#34;https://rishikrishna.com/files/remoteserver/cloudfare-connectiong.png&#34; 
+    alt=&#34;cloudfare-connectiong&#34; 
+    title=&#34;cloudfare-connectiong&#34;
+    style=&#34;max-width: 100%; height: auto; cursor: pointer;&#34;
+  /&gt;
+&lt;/a&gt;
+&lt;/p&gt;</description>
       
     </item>
     

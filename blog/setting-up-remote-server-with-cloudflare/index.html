@@ -35,7 +35,7 @@
 Local Machine - The device in you have
 Remote Machine - The server (preferably in your home)
 Step 1: Installing Docker in Remote Machine follow these instruction to install docker in remote machine Installing Docker
-Step 2: Signing up, to cloudflare and setting up domain (local machine) login to cloudflare dashboard via dash.cloudflare.com and an account via your email NOTE: You need to have a domain with you to do all these btw…">
+Step 2: Signing up, to cloudflare and setting up domain (local machine) login to cloudflare dashboard via dash.cloudflare.com and an account via your email">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -51,7 +51,7 @@ Step 2: Signing up, to cloudflare and setting up domain (local machine) login to
 Local Machine - The device in you have
 Remote Machine - The server (preferably in your home)
 Step 1: Installing Docker in Remote Machine follow these instruction to install docker in remote machine Installing Docker
-Step 2: Signing up, to cloudflare and setting up domain (local machine) login to cloudflare dashboard via dash.cloudflare.com and an account via your email NOTE: You need to have a domain with you to do all these btw…">
+Step 2: Signing up, to cloudflare and setting up domain (local machine) login to cloudflare dashboard via dash.cloudflare.com and an account via your email">
 
 
     
@@ -81,6 +81,10 @@ Step 2: Signing up, to cloudflare and setting up domain (local machine) login to
 
     
     
+    
+      
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
     
 </head>
 <body data-theme = "light" class="notransition">
@@ -188,23 +192,79 @@ Remote Machine - The server (preferably in your home)</p>
 <a href="https://docs.docker.com/engine/install/">Installing Docker</a></p>
 <h2 id="step-2-signing-up-to-cloudflare-and-setting-up-domain-local-machine">Step 2: Signing up, to cloudflare and setting up domain (local machine)</h2>
 <p>login to cloudflare dashboard via <a href="https://dash.cloudflare.com/">dash.cloudflare.com</a> and an account via your email
-<img src="/files/remoteserver/cloudfare-connectiong.png" alt="cloudfare-connectiong"></p>
+<a href="/files/remoteserver/cloudfare-connectiong.png" data-lightbox="post-gallery" data-title="cloudfare-connectiong">
+  <img 
+    src="/files/remoteserver/cloudfare-connectiong.png" 
+    alt="cloudfare-connectiong" 
+    title="cloudfare-connectiong"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+</p>
 <blockquote>
 <p>NOTE: You need to have a <strong>domain</strong> with you to do all these btw&hellip;</p>
 </blockquote>
 <p>Now press <strong>onboard domain</strong> and add the domain from your registrar to cloudflare, it might take some time to propagate the updates..</p>
 <h2 id="step-3-setting-up-zero-trust">Step 3: Setting up zero trust</h2>
-<p><img src="/files/remoteserver/zero-trust-selection.png" alt="zero-trust"><br>
+<p><a href="/files/remoteserver/zero-trust-selection.png" data-lightbox="post-gallery" data-title="zero-trust">
+  <img 
+    src="/files/remoteserver/zero-trust-selection.png" 
+    alt="zero-trust" 
+    title="zero-trust"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+<br>
 select the zero trust option from the selection tool from the left navigation bar, if ur first time here, it might ask for setting up an account and all, finish em..
-<img src="/files/remoteserver/selecting-tunnel.png" alt="selecting zero trust"><br>
+<a href="/files/remoteserver/selecting-tunnel.png" data-lightbox="post-gallery" data-title="selecting zero trust">
+  <img 
+    src="/files/remoteserver/selecting-tunnel.png" 
+    alt="selecting zero trust" 
+    title="selecting zero trust"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+<br>
 now lets create a tunnel<br>
-<img src="/files/remoteserver/tunnel-creation.png" alt="creating a tunnel"><br>
+<a href="/files/remoteserver/tunnel-creation.png" data-lightbox="post-gallery" data-title="creating a tunnel">
+  <img 
+    src="/files/remoteserver/tunnel-creation.png" 
+    alt="creating a tunnel" 
+    title="creating a tunnel"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+<br>
 Now select cloudflared from this
-<img src="/files/remoteserver/cloudflared-selectioon.png" alt="Cloudflare selection"><br>
+<a href="/files/remoteserver/cloudflared-selectioon.png" data-lightbox="post-gallery" data-title="Cloudflare selection">
+  <img 
+    src="/files/remoteserver/cloudflared-selectioon.png" 
+    alt="Cloudflare selection" 
+    title="Cloudflare selection"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+<br>
 After this, give a <strong>name</strong> to your tunnel, and then:
-<img src="/files/remoteserver/docker-selection.png" alt="Docker selection">
+<a href="/files/remoteserver/docker-selection.png" data-lightbox="post-gallery" data-title="Docker selection">
+  <img 
+    src="/files/remoteserver/docker-selection.png" 
+    alt="Docker selection" 
+    title="Docker selection"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+
 Copy this line into the remote system, preferably via ssh from the local system, this will set up the SSH tunnel for the Cloudflare, now if you scroll down to the site you can see this connectiors part, <strong>wait for smthing to appear here</strong>, then continue
-<img src="/files/remoteserver/image.png" alt="remote service"><br>
+<a href="/files/remoteserver/image.png" data-lightbox="post-gallery" data-title="remote service">
+  <img 
+    src="/files/remoteserver/image.png" 
+    alt="remote service" 
+    title="remote service"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+<br>
 Then next..next and you will be back in the dashboard&hellip;</p>
 <h2 id="step4-now-the-final-setting-up-the-connection">Step4: Now the final setting up the connection</h2>
 <p>So mee sleepy af, floow this <a href="https://chatgpt.com/share/6918e8d9-6e18-8001-b085-6cb045ebd15f">chatgpt.com/share/settinup</a></p>
@@ -321,6 +381,7 @@ Then next..next and you will be back in the dashboard&hellip;</p>
 </svg>
 
 </a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
 
     

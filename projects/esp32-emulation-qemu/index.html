@@ -74,6 +74,10 @@
     
     
     
+      
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+    
 </head>
 <body data-theme = "light" class="notransition">
 
@@ -283,10 +287,26 @@ Copy and paste the following command to your shell&rsquo;s profile (.profile, .b
 </span></span></code></pre></div><p>Yay we downloaded and installed ESP-IDF, now if we enter</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>get_idf
 </span></span></code></pre></div><p>in terminal it activates ESP-IDF if that directory
-<img src="/files/image.png" alt="just running esp idf"></p>
+<a href="/files/image.png" data-lightbox="post-gallery" data-title="just running esp idf">
+  <img 
+    src="/files/image.png" 
+    alt="just running esp idf" 
+    title="just running esp idf"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+</p>
 <p>now to get the ESP-IDF version, we need to enter this commands into terminal:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>idf.py --version <span style="color:#75715e">#this should be done after entering get_idf</span>
-</span></span></code></pre></div><p><img src="/files/esp-idf-new.png" alt="After selecting esp idf version">
+</span></span></code></pre></div><p><a href="/files/esp-idf-new.png" data-lightbox="post-gallery" data-title="After selecting esp idf version">
+  <img 
+    src="/files/esp-idf-new.png" 
+    alt="After selecting esp idf version" 
+    title="After selecting esp idf version"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+
 which gives the output</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ESP-IDF v5.5.1
 </span></span></code></pre></div><h3 id="qemu">QEMU</h3>
@@ -345,7 +365,15 @@ lets create a working directory via:</p>
 <p>NOTE:  To exit the emulation use <code>CTRL + ]</code></p>
 </blockquote>
 <p>now this will run the program in QEMU successfully, it looks like
-<img src="/files/hello-world-success.png" alt="Hello World simulation"></p>
+<a href="/files/hello-world-success.png" data-lightbox="post-gallery" data-title="Hello World simulation">
+  <img 
+    src="/files/hello-world-success.png" 
+    alt="Hello World simulation" 
+    title="Hello World simulation"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+</p>
 <h2 id="demo-2-blinking-led">Demo 2: Blinking LED</h2>
 <p>Now that everything is working fine lets start a new project from scratch, to blink an LED, I am believing that you have a bit of background in ESP32 and how its GPIO&rsquo;s work, if not <a href="https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/gpio.html">here</a> is a link to that.<br>
 So we are going to attach an LED on GPIO 2 and Turn it ON wait for 1000ms(1 second) then turn it OFF then wait for another 1000ms(1 second) until i end the program, or like a loop.<br>
@@ -357,7 +385,15 @@ first lets get started with initializing a simple project, i am using the same w
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd led_blink/main
 </span></span><span style="display:flex;"><span>ls
 </span></span></code></pre></div><p>It shows these files as output
-<img src="/files/led-blink-file.png" alt="LED blink basic"></p>
+<a href="/files/led-blink-file.png" data-lightbox="post-gallery" data-title="LED blink basic">
+  <img 
+    src="/files/led-blink-file.png" 
+    alt="LED blink basic" 
+    title="LED blink basic"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+</p>
 <p>now We need to edit the <code>led_blink.c</code> file, it is the root file or like the main file of the project.<br>
 open this in any of your liked text editors like nvim, vs-code, nano etc&hellip; we are using nano text editor as it comes inbuilt with Ubuntu/Debian systems and is easy to use.<br>
 Copy the below code snippet into the file <code>led_blink.c</code>, you can do this by:</p>
@@ -396,7 +432,15 @@ After that to exit nano: <code>Ctrl+x</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>idf.py build
 </span></span><span style="display:flex;"><span>idf.py qemu monitor
 </span></span></code></pre></div><p>After running this you might end up with someting like
-<img src="/files/blink-no-wrk.png" alt="Blink No work">
+<a href="/files/blink-no-wrk.png" data-lightbox="post-gallery" data-title="Blink No work">
+  <img 
+    src="/files/blink-no-wrk.png" 
+    alt="Blink No work" 
+    title="Blink No work"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+
 So <strong>i can&rsquo;t see an LED lightup</strong>, but its actually happening, as we are not connected to the hardware we cannot see physical GPIO&rsquo;s to see the ON/OFF commands <strong>we need to add Logging into the program</strong>&hellip;or we could do it in a more simpler way via <code>printf</code> which will be demonstrated in the <a href="http://localhost:1313/projects/esp32-emulation-qemu/#step-6-program-3-simulating-temperature-sensor">next prorgam</a> so once again go to <code>/main/led_blink.c</code> and edit the file via <strong>nano</strong>, if you want you can remove the previous code snipped and add this or add the newly added lines</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;freertos/FreeRTOS.h&#34;</span><span style="color:#75715e">
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;freertos/task.h&#34;</span><span style="color:#75715e">
@@ -425,7 +469,15 @@ So <strong>i can&rsquo;t see an LED lightup</strong>, but its actually happening
 <p><strong>Important: Use this code snippet or else you might not get the correct output</strong></p>
 </blockquote>
 <p>Now you will be seeing
-<img src="/files/blink-working.png" alt="Blinking LED working">
+<a href="/files/blink-working.png" data-lightbox="post-gallery" data-title="Blinking LED working">
+  <img 
+    src="/files/blink-working.png" 
+    alt="Blinking LED working" 
+    title="Blinking LED working"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+
 YAY ! We successfully done blinking LED in QEMU via ESP-IDF</p>
 <h2 id="demo-3-simulating-temperature-sensor">Demo 3: Simulating Temperature Sensor</h2>
 <p>Here eveything is similar to what we have done before, but rather than using Logging, we are going to use a simple printf, but it also have its disadvantages, like timestamps wont be there, also if we want to do advanced log filtering it cant be done, but if we just want simple output without all the advanced things we can use <code>printf</code>.<br>
@@ -483,7 +535,15 @@ now coming back to the program, first lets create a new program in the workspace
 </span></span><span style="display:flex;"><span>idf.py build
 </span></span><span style="display:flex;"><span>idf.py qemu monitor
 </span></span></code></pre></div><p>Which gives the output:
-<img src="/files/temp-one-out-succes.png" alt="Temperature sensor output"></p>
+<a href="/files/temp-one-out-succes.png" data-lightbox="post-gallery" data-title="Temperature sensor output">
+  <img 
+    src="/files/temp-one-out-succes.png" 
+    alt="Temperature sensor output" 
+    title="Temperature sensor output"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+</p>
 <p>Now if we want to make the program simpler, because we are only simulating the values you can copy the code below to make the simulation simpler by just creating a random number between 20 and 35, also congratulations on making it till here.</p>
 <blockquote>
 <p><strong>NOTE</strong>: to delete the entire program without deleting the file you can use the command <code>echo &quot;&quot; &gt; main/temp_simulate.c</code></p>
@@ -509,7 +569,15 @@ now coming back to the program, first lets create a new program in the workspace
 </span></span><span style="display:flex;"><span>idf.py build
 </span></span><span style="display:flex;"><span>idf.py qemu monitor
 </span></span></code></pre></div><p>We get similar output
-<img src="/files/temp-new-output.png" alt="Get the new temperature data"></p>
+<a href="/files/temp-new-output.png" data-lightbox="post-gallery" data-title="Get the new temperature data">
+  <img 
+    src="/files/temp-new-output.png" 
+    alt="Get the new temperature data" 
+    title="Get the new temperature data"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+</p>
 <p><strong>YAY !!! We have successfully completed Setting up ESP-IDF and integrating QEMU with it and ran multiple programs with it</strong></p>
 <h2 id="running-qemu-in-headless-mode-for-yaksh-most-important-section">Running QEMU In Headless-mode: for Yaksh (Most Important Section)</h2>
 <p>I am using this <a href="https://github.com/Ebiroll/qemu_esp32/blob/master/README.md?utm_source=chatgpt.com">Reference</a>.<br>
@@ -520,7 +588,15 @@ for that first let go the   <code>temp_simulate</code> project inside the <code>
 </span></span><span style="display:flex;"><span>idf.py build
 </span></span></code></pre></div><p>now we can check the build directory by:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls build
-</span></span></code></pre></div><p><img src="/files/yaksh-build-happening.png" alt="Yaksh Build process">
+</span></span></code></pre></div><p><a href="/files/yaksh-build-happening.png" data-lightbox="post-gallery" data-title="Yaksh Build process">
+  <img 
+    src="/files/yaksh-build-happening.png" 
+    alt="Yaksh Build process" 
+    title="Yaksh Build process"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+
 Here we can see the <code>bootloader</code>, <code>partition_table</code> directories and <code>temp_simulate.bin</code> we need to combine these three to create a proper SPI flash image (with bootloader + partitions + app), we can do this via:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>esptool.py --chip esp32 merge_bin -o build/flash_image.bin <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  0x1000 build/bootloader/bootloader.bin <span style="color:#ae81ff">\
@@ -537,7 +613,15 @@ Just to be on the safer side we are going to <strong>pad this image</strong> <co
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>qemu-system-xtensa -nographic -machine esp32 <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -drive file<span style="color:#f92672">=</span>build/flash_image.bin,if<span style="color:#f92672">=</span>mtd,format<span style="color:#f92672">=</span>raw
 </span></span></code></pre></div><p>which gives the output:
-<img src="/files/final-qemu-output.png" alt="QEMU in headless mode"></p>
+<a href="/files/final-qemu-output.png" data-lightbox="post-gallery" data-title="QEMU in headless mode">
+  <img 
+    src="/files/final-qemu-output.png" 
+    alt="QEMU in headless mode" 
+    title="QEMU in headless mode"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+</p>
 <blockquote>
 <p>TO exit from this session you have to use <code>Ctrl+a</code> then click <code>x</code></p>
 </blockquote>
@@ -669,6 +753,7 @@ Now the workflow would be:</p>
 </svg>
 
 </a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 
 
     
