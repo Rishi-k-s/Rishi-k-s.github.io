@@ -1,4 +1,4 @@
-name: Deploy My website
+name: Deploy Website
 
 on:
   push:
@@ -8,13 +8,15 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Deploy to droplet via SSH
+      - name: Deploy to VPS via SSH
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.DO_HOST }}
           username: ${{ secrets.DO_USER }}
           key: ${{ secrets.DO_SSH_KEY }}
           script: |
-            cd /var/www/Rishi-k-s.github.io
-            bash deploy.sh
+            cd /var/www/rishikrishna.com
+            git pull origin main
+            sudo systemctl reload nginx
