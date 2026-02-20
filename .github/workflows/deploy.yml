@@ -19,4 +19,3 @@ jobs:
           script: |
             cd /var/www/rishikrishna.com
             git pull origin main
-            systemctl reload nginx
