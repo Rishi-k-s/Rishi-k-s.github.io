@@ -29,6 +29,7 @@
 &lt;li&gt;&lt;strong&gt;Self-hosting&lt;/strong&gt; = your hardware + your OS + your services, instead of someone else&amp;rsquo;s cloud.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Client-server basics&lt;/strong&gt;: ports, and why &amp;ldquo;works on localhost but not from my phone&amp;rdquo; is the #1 beginner confusion.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Docker / containers&lt;/strong&gt; are the standard way modern self-hosted apps are packaged. Most projects ship a &lt;code&gt;docker-compose.yml&lt;/code&gt; — learn this and you can deploy almost anything.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Extra: &lt;a href=&#34;https://github.com/Rishi-k-s/basic-server/blob/main/dockerinit.sh&#34;&gt;Docker installation script&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;The core problem&lt;/strong&gt;: how does the outside world reach a device sitting behind your home router with no public IP, or behind CGNAT? This is the bridge into networking.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
