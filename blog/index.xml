@@ -5,8 +5,82 @@
     <link>https://rishikrishna.com/blog/</link>
     <description>Recent content in Blogs on Rishi Krishna | Maker  &amp; Engineer</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Sun, 16 Nov 2025 01:18:32 +0530</lastBuildDate><atom:link href="https://rishikrishna.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Jul 2026 10:46:49 +0530</lastBuildDate><atom:link href="https://rishikrishna.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Selfhosting in Raspberry PI</title>
+      <link>https://rishikrishna.com/blog/selfhosting-raspberry-pi/</link>
+      <pubDate>Sat, 11 Jul 2026 10:46:49 +0530</pubDate>
+      
+      <guid>https://rishikrishna.com/blog/selfhosting-raspberry-pi/</guid>
+      
+      <description>&lt;h1 id=&#34;getting-started-with-self-hosting-on-raspberry-pi&#34;&gt;Getting Started with Self-Hosting on Raspberry Pi&lt;/h1&gt;
+&lt;p&gt;Session notes — covers the why, the networking problem, hands-on setup, and a tour of popular self-hostable services.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-why-self-host&#34;&gt;1. Why Self-Host?&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Own your data&lt;/strong&gt; instead of trusting a third-party SaaS company with it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cost savings&lt;/strong&gt; over time — a one-time Pi purchase vs. recurring subscriptions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learning value&lt;/strong&gt; — this is how real infrastructure actually works: networking, containers, DNS, reverse proxies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;2-self-hosting-fundamentals&#34;&gt;2. Self-Hosting Fundamentals&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Self-hosting&lt;/strong&gt; = your hardware + your OS + your services, instead of someone else&amp;rsquo;s cloud.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Client-server basics&lt;/strong&gt;: ports, and why &amp;ldquo;works on localhost but not from my phone&amp;rdquo; is the #1 beginner confusion.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Docker / containers&lt;/strong&gt; are the standard way modern self-hosted apps are packaged. Most projects ship a &lt;code&gt;docker-compose.yml&lt;/code&gt; — learn this and you can deploy almost anything.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;The core problem&lt;/strong&gt;: how does the outside world reach a device sitting behind your home router with no public IP, or behind CGNAT? This is the bridge into networking.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;3-the-networking-problem&#34;&gt;3. The Networking Problem&lt;/h2&gt;
+&lt;h3 id=&#34;traditional-approach-port-forwarding&#34;&gt;Traditional approach: Port Forwarding&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Forward a port on your router to your Pi&amp;rsquo;s local IP.&lt;/li&gt;
+&lt;li&gt;Downsides: opens attack surface directly to your home network, breaks with dynamic IPs, and &lt;strong&gt;many ISPs (especially in India) block inbound traffic entirely via CGNAT&lt;/strong&gt; — so this often doesn&amp;rsquo;t even work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;two-modern-solutions--they-solve-different-problems&#34;&gt;Two modern solutions — they solve &lt;em&gt;different&lt;/em&gt; problems&lt;/h3&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;strong&gt;Tailscale&lt;/strong&gt;&lt;/th&gt;
+					&lt;th&gt;&lt;strong&gt;Cloudflare Tunnel&lt;/strong&gt;&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td&gt;What it is&lt;/td&gt;
+					&lt;td&gt;Private mesh VPN (WireGuard-based)&lt;/td&gt;
+					&lt;td&gt;Reverse tunnel from your Pi to Cloudflare&amp;rsquo;s edge&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Use case&lt;/td&gt;
+					&lt;td&gt;Reach &lt;em&gt;your own&lt;/em&gt; stuff from &lt;em&gt;your own&lt;/em&gt; devices (SSH, admin panels, personal dashboards)&lt;/td&gt;
+					&lt;td&gt;Let the &lt;em&gt;public&lt;/em&gt;/other people reach a service (a website, an API)&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td&gt;Open ports needed?&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+					&lt;td&gt;No&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Simple decision framework:&lt;/strong&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Wmc_th</title>
+      <link>https://rishikrishna.com/blog/wmc_th/</link>
+      <pubDate>Sat, 14 Mar 2026 13:06:13 +0530</pubDate>
+      
+      <guid>https://rishikrishna.com/blog/wmc_th/</guid>
+      
+      <description>&lt;h1 id=&#34;resources&#34;&gt;Resources&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;files/wmc.pdf&#34;&gt;ppt&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
     <item>
       <title>Setting Up Remote Server With Cloudflare</title>
       <link>https://rishikrishna.com/blog/setting-up-remote-server-with-cloudflare/</link>

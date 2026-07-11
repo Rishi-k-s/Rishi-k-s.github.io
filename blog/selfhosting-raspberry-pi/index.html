@@ -3,11 +3,11 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">The Bluetooth car: the cliche starter project | Rishi Krishna | Maker  &amp; Engineer</title>
-<meta property="og:title" content="The Bluetooth car: the cliche starter project | Rishi Krishna | Maker  &amp; Engineer" />
-<meta name="twitter:title" content="The Bluetooth car: the cliche starter project | Rishi Krishna | Maker  &amp; Engineer" />
-<meta itemprop="name" content="The Bluetooth car: the cliche starter project | Rishi Krishna | Maker  &amp; Engineer" />
-<meta name="application-name" content="The Bluetooth car: the cliche starter project | Rishi Krishna | Maker  &amp; Engineer" />
+<title itemprop="name">Selfhosting in Raspberry PI | Rishi Krishna | Maker  &amp; Engineer</title>
+<meta property="og:title" content="Selfhosting in Raspberry PI | Rishi Krishna | Maker  &amp; Engineer" />
+<meta name="twitter:title" content="Selfhosting in Raspberry PI | Rishi Krishna | Maker  &amp; Engineer" />
+<meta itemprop="name" content="Selfhosting in Raspberry PI | Rishi Krishna | Maker  &amp; Engineer" />
+<meta name="application-name" content="Selfhosting in Raspberry PI | Rishi Krishna | Maker  &amp; Engineer" />
 <meta property="og:site_name" content="Rishi Krishna | Maker &amp; Engineer" />
 
 <meta name="description" content="Explore the portfolio of Rishi Krishna — a Curious Maker, Designer, and Tech Enthusiast passionate about FOSS, IoT, AI, and open hardware innovation.">
@@ -18,7 +18,7 @@
 <meta property="og:locale" content="en-us" />
 <meta name="language" content="en-us" />
 
-  <link rel="alternate" hreflang="en-gb" href="https://rishikrishna.com/projects/car-class-seven/" title="" />
+  <link rel="alternate" hreflang="en-gb" href="https://rishikrishna.com/blog/selfhosting-raspberry-pi/" title="" />
 
 
 
@@ -28,29 +28,29 @@
 <meta name="generator" content="Hugo 0.164.0">
 
     
-    <meta property="og:url" content="https://rishikrishna.com/projects/car-class-seven/">
+    <meta property="og:url" content="https://rishikrishna.com/blog/selfhosting-raspberry-pi/">
 	<meta property="og:site_name" content="Rishi Krishna | Maker  & Engineer">
-	<meta property="og:title" content="The Bluetooth car: the cliche starter project">
-	<meta property="og:description" content="The bluetooth car is equivalent to volcano in science fair like there are soo many of them, but still its a starting project
-It was the first time i made smthing with arduino">
+	<meta property="og:title" content="Selfhosting in Raspberry PI">
+	<meta property="og:description" content="Getting Started with Self-Hosting on Raspberry Pi Session notes — covers the why, the networking problem, hands-on setup, and a tour of popular self-hostable services.
+1. Why Self-Host? Own your data instead of trusting a third-party SaaS company with it. Cost savings over time — a one-time Pi purchase vs. recurring subscriptions. Learning value — this is how real infrastructure actually works: networking, containers, DNS, reverse proxies. 2. Self-Hosting Fundamentals Self-hosting = your hardware &#43; your OS &#43; your services, instead of someone else’s cloud. Client-server basics: ports, and why “works on localhost but not from my phone” is the #1 beginner confusion. Docker / containers are the standard way modern self-hosted apps are packaged. Most projects ship a docker-compose.yml — learn this and you can deploy almost anything. The core problem: how does the outside world reach a device sitting behind your home router with no public IP, or behind CGNAT? This is the bridge into networking. 3. The Networking Problem Traditional approach: Port Forwarding Forward a port on your router to your Pi’s local IP. Downsides: opens attack surface directly to your home network, breaks with dynamic IPs, and many ISPs (especially in India) block inbound traffic entirely via CGNAT — so this often doesn’t even work. Two modern solutions — they solve different problems Tailscale Cloudflare Tunnel What it is Private mesh VPN (WireGuard-based) Reverse tunnel from your Pi to Cloudflare’s edge Use case Reach your own stuff from your own devices (SSH, admin panels, personal dashboards) Let the public/other people reach a service (a website, an API) Open ports needed? No No Simple decision framework:">
 	<meta property="og:locale" content="en_us">
 	<meta property="og:type" content="article">
-		<meta property="article:section" content="projects">
-		<meta property="article:published_time" content="2018-11-07T11:39:16+05:30">
-		<meta property="article:modified_time" content="2018-11-07T11:39:16+05:30">
+		<meta property="article:section" content="blog">
+		<meta property="article:published_time" content="2026-07-11T10:46:49+05:30">
+		<meta property="article:modified_time" content="2026-07-11T10:46:49+05:30">
 
 
     
     
 	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="The Bluetooth car: the cliche starter project">
-	<meta name="twitter:description" content="The bluetooth car is equivalent to volcano in science fair like there are soo many of them, but still its a starting project
-It was the first time i made smthing with arduino">
+	<meta name="twitter:title" content="Selfhosting in Raspberry PI">
+	<meta name="twitter:description" content="Getting Started with Self-Hosting on Raspberry Pi Session notes — covers the why, the networking problem, hands-on setup, and a tour of popular self-hostable services.
+1. Why Self-Host? Own your data instead of trusting a third-party SaaS company with it. Cost savings over time — a one-time Pi purchase vs. recurring subscriptions. Learning value — this is how real infrastructure actually works: networking, containers, DNS, reverse proxies. 2. Self-Hosting Fundamentals Self-hosting = your hardware &#43; your OS &#43; your services, instead of someone else’s cloud. Client-server basics: ports, and why “works on localhost but not from my phone” is the #1 beginner confusion. Docker / containers are the standard way modern self-hosted apps are packaged. Most projects ship a docker-compose.yml — learn this and you can deploy almost anything. The core problem: how does the outside world reach a device sitting behind your home router with no public IP, or behind CGNAT? This is the bridge into networking. 3. The Networking Problem Traditional approach: Port Forwarding Forward a port on your router to your Pi’s local IP. Downsides: opens attack surface directly to your home network, breaks with dynamic IPs, and many ISPs (especially in India) block inbound traffic entirely via CGNAT — so this often doesn’t even work. Two modern solutions — they solve different problems Tailscale Cloudflare Tunnel What it is Private mesh VPN (WireGuard-based) Reverse tunnel from your Pi to Cloudflare’s edge Use case Reach your own stuff from your own devices (SSH, admin panels, personal dashboards) Let the public/other people reach a service (a website, an API) Open ports needed? No No Simple decision framework:">
 
 
     
 
-    <link rel="canonical" href="https://rishikrishna.com/projects/car-class-seven/">
+    <link rel="canonical" href="https://rishikrishna.com/blog/selfhosting-raspberry-pi/">
     <link href="/style.min.2d921c18cf1ec555ffc03d59a8adc211c402c68c930c27d6a0c306ab175a8d09.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
@@ -109,14 +109,14 @@ stroke-linejoin="round" class="feather feather-home">
                 
                 
                 <li>
-                    <a class="menu-link " href="/blog/">
+                    <a class="menu-link active" href="/blog/">
                         Blog
                     </a>
                     
                 </li>
                 
                 <li>
-                    <a class="menu-link active" href="/projects/">
+                    <a class="menu-link " href="/projects/">
                         Projects
                     </a>
                     
@@ -156,21 +156,155 @@ stroke-linejoin="round" class="feather feather-home">
     <main class="page-content" aria-label="Content">
         <article>
             <header class="header">
-                <h1 class="header-title">The Bluetooth car: the cliche starter project</h1>
+                <h1 class="header-title">Selfhosting in Raspberry PI</h1>
                 
                 
                 
                 <div class="post-meta">
-                    <time datetime="2018-11-07T11:39:16&#43;05:30" itemprop="datePublished"> 7 Nov 2018 </time>
+                    <time datetime="2026-07-11T10:46:49&#43;05:30" itemprop="datePublished"> 11 Jul 2026 </time>
                 </div>
                 
             </header>
             
             <div class="page-content">
-                <blockquote>
-<p>The bluetooth car is equivalent to volcano in science fair like there are soo many of them, but still its a starting project</p>
+                <h1 id="getting-started-with-self-hosting-on-raspberry-pi">Getting Started with Self-Hosting on Raspberry Pi</h1>
+<p>Session notes — covers the why, the networking problem, hands-on setup, and a tour of popular self-hostable services.</p>
+<hr>
+<h2 id="1-why-self-host">1. Why Self-Host?</h2>
+<ul>
+<li><strong>Own your data</strong> instead of trusting a third-party SaaS company with it.</li>
+<li><strong>Cost savings</strong> over time — a one-time Pi purchase vs. recurring subscriptions.</li>
+<li><strong>Learning value</strong> — this is how real infrastructure actually works: networking, containers, DNS, reverse proxies.</li>
+</ul>
+<hr>
+<h2 id="2-self-hosting-fundamentals">2. Self-Hosting Fundamentals</h2>
+<ul>
+<li><strong>Self-hosting</strong> = your hardware + your OS + your services, instead of someone else&rsquo;s cloud.</li>
+<li><strong>Client-server basics</strong>: ports, and why &ldquo;works on localhost but not from my phone&rdquo; is the #1 beginner confusion.</li>
+<li><strong>Docker / containers</strong> are the standard way modern self-hosted apps are packaged. Most projects ship a <code>docker-compose.yml</code> — learn this and you can deploy almost anything.</li>
+<li><strong>The core problem</strong>: how does the outside world reach a device sitting behind your home router with no public IP, or behind CGNAT? This is the bridge into networking.</li>
+</ul>
+<hr>
+<h2 id="3-the-networking-problem">3. The Networking Problem</h2>
+<h3 id="traditional-approach-port-forwarding">Traditional approach: Port Forwarding</h3>
+<ul>
+<li>Forward a port on your router to your Pi&rsquo;s local IP.</li>
+<li>Downsides: opens attack surface directly to your home network, breaks with dynamic IPs, and <strong>many ISPs (especially in India) block inbound traffic entirely via CGNAT</strong> — so this often doesn&rsquo;t even work.</li>
+</ul>
+<h3 id="two-modern-solutions--they-solve-different-problems">Two modern solutions — they solve <em>different</em> problems</h3>
+<table>
+	<thead>
+			<tr>
+					<th></th>
+					<th><strong>Tailscale</strong></th>
+					<th><strong>Cloudflare Tunnel</strong></th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>What it is</td>
+					<td>Private mesh VPN (WireGuard-based)</td>
+					<td>Reverse tunnel from your Pi to Cloudflare&rsquo;s edge</td>
+			</tr>
+			<tr>
+					<td>Use case</td>
+					<td>Reach <em>your own</em> stuff from <em>your own</em> devices (SSH, admin panels, personal dashboards)</td>
+					<td>Let the <em>public</em>/other people reach a service (a website, an API)</td>
+			</tr>
+			<tr>
+					<td>Open ports needed?</td>
+					<td>No</td>
+					<td>No</td>
+			</tr>
+	</tbody>
+</table>
+<p><strong>Simple decision framework:</strong></p>
+<blockquote>
+<p>Private &amp; personal → <strong>Tailscale</strong>.
+Public &amp; shared → <strong>Cloudflare Tunnel</strong>.</p>
 </blockquote>
-<p>It was the first time i made smthing with arduino</p>
+<p><strong>Bonus / newer feature — Tailscale Funnel:</strong> lets you expose a service <em>publicly</em> directly through Tailscale, no Cloudflare or domain needed:</p>
+<pre tabindex="0"><code>tailscale funnel 443 on
+</code></pre><p>Blurs the &ldquo;private vs public&rdquo; line a bit — good for quick demos without owning a domain.</p>
+<hr>
+<h2 id="4-hands-on-setup">4. Hands-On Setup</h2>
+<ol>
+<li><strong>Flash Raspberry Pi OS Lite</strong> (headless), enable SSH during imaging.</li>
+<li><strong>Install Tailscale</strong>, join the same tailnet, test SSH/ping between devices:
+<pre tabindex="0"><code>curl -fsSL https://tailscale.com/install.sh | sh
+tailscale up
+</code></pre></li>
+<li><strong>Install <code>cloudflared</code></strong>, create a tunnel, set up the DNS CNAME, and route a local service via <code>config.yml</code>.</li>
+<li><strong>Install Docker + docker-compose</strong> on the Pi.</li>
+</ol>
+<blockquote>
+<p>Note: Cloudflare Tunnel setup needs a domain + Cloudflare account per person, so it&rsquo;s often easier as a pre-recorded/pre-done walkthrough in a live workshop rather than something everyone does hands-on. Tailscale is much lower-friction — just needs a free account.</p>
+</blockquote>
+<hr>
+<h2 id="5-famous-self-hostable-services">5. Famous Self-Hostable Services</h2>
+<p><strong>Password / secrets</strong></p>
+<ul>
+<li>Vaultwarden (self-hosted Bitwarden-compatible vault)</li>
+</ul>
+<p><strong>Media</strong></p>
+<ul>
+<li>Jellyfin</li>
+<li>Sonarr / Radarr (the &ldquo;*arr stack&rdquo;)</li>
+<li>Immich — self-hosted Google Photos alternative with on-device face/object recognition. Great demo: upload a few photos, watch it cluster faces. Strong answer to &ldquo;why bother self-hosting instead of the cloud.&rdquo;</li>
+</ul>
+<p><strong>Dashboards</strong></p>
+<ul>
+<li>Homepage</li>
+<li>Homarr</li>
+</ul>
+<p><strong>Files / sync</strong></p>
+<ul>
+<li>Nextcloud</li>
+<li>Syncthing</li>
+</ul>
+<p><strong>Notes / knowledge</strong></p>
+<ul>
+<li>Trilium</li>
+<li>Outline</li>
+</ul>
+<p><strong>Monitoring</strong></p>
+<ul>
+<li>Uptime Kuma — fast to deploy, visually satisfying, ties in nicely as &ldquo;monitor the very Pi we just tunneled.&rdquo;</li>
+</ul>
+<p><strong>Networking / DNS</strong></p>
+<ul>
+<li>Pi-hole — often the very first self-hosted service people run. Network-wide ad blocking at the DNS level, easy and satisfying to demo.</li>
+</ul>
+<p><strong>Smart home</strong></p>
+<ul>
+<li>Home Assistant</li>
+</ul>
+<p><strong>Container maintenance</strong></p>
+<ul>
+<li>Watchtower — auto-updates your Docker containers.</li>
+</ul>
+<hr>
+<h2 id="6-pi-specific-reliability-notes">6. Pi-Specific Reliability Notes</h2>
+<p>These matter specifically because it&rsquo;s a Pi, not just &ldquo;self-hosting in general&rdquo;:</p>
+<ul>
+<li><strong>SD card vs USB/NVMe boot</strong> — SD card corruption from unclean shutdowns or write wear (logs, databases) is the #1 cause of self-hosted Pi setups dying. Consider booting from a USB SSD, or NVMe via a HAT on Pi 5.</li>
+<li><strong>Power</strong> — undervoltage causing random reboots is a classic mystery bug. Use a proper PSU; consider a PoE HAT to avoid needing a separate outlet near the router.</li>
+<li><strong>Backups</strong> — a <code>restic</code> or <code>rsync</code> cron job to another disk/cloud. Self-hosting without backups is a time bomb.</li>
+</ul>
+<hr>
+<h2 id="7-security-reminders">7. Security Reminders</h2>
+<ul>
+<li>Don&rsquo;t skip updates.</li>
+<li>Never expose admin panels without authentication.</li>
+<li>Look into Tailscale ACLs if you want tighter access control.</li>
+</ul>
+<hr>
+<h2 id="8-where-to-go-next">8. Where to Go Next</h2>
+<ul>
+<li><strong><a href="https://github.com/awesome-selfhosted/awesome-selfhosted">Awesome-Selfhosted</a></strong> — huge curated list, good rabbit hole.</li>
+<li><strong>Reverse proxies</strong> (Nginx / Caddy / Traefik) — natural next topic once you&rsquo;re running multiple services behind Cloudflare Tunnel.</li>
+<li><strong>k3s on multiple Pis</strong> — lightweight Kubernetes; popular specifically because Pis are cheap enough to cluster. A good &ldquo;how far this rabbit hole goes&rdquo; closing thought.</li>
+</ul>
 
             </div>
         </article></main>
