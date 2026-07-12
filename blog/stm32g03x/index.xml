@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>STM32 Series messing around on Rishi Krishna | Maker  &amp; Engineer</title>
+    <link>https://rishikrishna.com/blog/stm32g03x/</link>
+    <description>Recent content in STM32 Series messing around on Rishi Krishna | Maker  &amp; Engineer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Jul 2026 16:54:48 +0530</lastBuildDate><atom:link href="https://rishikrishna.com/blog/stm32g03x/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>STM32 Series 2 ; Figuring How to Program</title>
+      <link>https://rishikrishna.com/blog/stm32g03x/figuring-how-to-program/</link>
+      <pubDate>Sun, 12 Jul 2026 16:54:48 +0530</pubDate>
+      
+      <guid>https://rishikrishna.com/blog/stm32g03x/figuring-how-to-program/</guid>
+      
+      <description>&lt;p&gt;SO&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>STM32 Series 1 ; I Have No Idea</title>
+      <link>https://rishikrishna.com/blog/stm32g03x/i-have-no-idea/</link>
+      <pubDate>Sun, 12 Jul 2026 16:21:10 +0530</pubDate>
+      
+      <guid>https://rishikrishna.com/blog/stm32g03x/i-have-no-idea/</guid>
+      
+      <description>&lt;h1 id=&#34;hi-people-of-the-internet&#34;&gt;Hi People of the internet&lt;/h1&gt;
+&lt;p&gt;I got a &lt;a href=&#34;https://robu.in/product/weact-studio-stm32g030f6p6-core-demo-board&#34;&gt;STM32G030F6P6 Dev Board&lt;/a&gt; by we act studio and not a lot of resources i could
+find in the internet, and i have never worked with a STM microcontroller before,
+except that time where i did a workshop at NIT calicut, the previous year, but then i didn&amp;rsquo;t look back since&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Now that i have got this board i have been trying to figure out how to use this, unlike
+esp32&amp;rsquo;s and arduino&amp;rsquo;s this one need an additional USB to UART converter or if you need more
+fancy debugging options there is this thing known as &lt;strong&gt;&lt;a href=&#34;https://robu.in/product/st-link-v2-programmer-for-stm8-and-stm32&#34;&gt;ST-LINK &lt;em&gt;V2&lt;/em&gt;&lt;/a&gt;&lt;/strong&gt; which is a USB debugger
+for stm32 and stm8 microcontrollers&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
