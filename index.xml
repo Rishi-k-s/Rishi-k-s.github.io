@@ -38,10 +38,10 @@ for stm32 and stm8 microcontrollers&lt;/p&gt;</description>
     
     <item>
       <title>Selfhosting in Raspberry PI</title>
-      <link>https://rishikrishna.com/blog/selfhosting-raspberry-pi/</link>
+      <link>https://rishikrishna.com/talks/selfhosting-raspberry-pi/</link>
       <pubDate>Sat, 11 Jul 2026 10:46:49 +0530</pubDate>
       
-      <guid>https://rishikrishna.com/blog/selfhosting-raspberry-pi/</guid>
+      <guid>https://rishikrishna.com/talks/selfhosting-raspberry-pi/</guid>
       
       <description>&lt;h1 id=&#34;getting-started-with-self-hosting-on-raspberry-pi&#34;&gt;Getting Started with Self-Hosting on Raspberry Pi&lt;/h1&gt;
 &lt;p&gt;Session notes — covers the why, the networking problem, hands-on setup, and a tour of popular self-hostable services.&lt;/p&gt;

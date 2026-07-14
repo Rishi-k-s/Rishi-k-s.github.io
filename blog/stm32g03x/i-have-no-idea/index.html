@@ -185,15 +185,33 @@ esp32&rsquo;s and arduino&rsquo;s this one need an additional USB to UART conver
 fancy debugging options there is this thing known as <strong><a href="https://robu.in/product/st-link-v2-programmer-for-stm8-and-stm32">ST-LINK <em>V2</em></a></strong> which is a USB debugger
 for stm32 and stm8 microcontrollers</p>
 <h2 id="the-board">The Board</h2>
-<p><a href="image.png" data-lightbox="post-gallery" data-title="alt text">
+<p>Now this is how the board looks like physically
+<a href="the_board.png" data-lightbox="post-gallery" data-title="Image of STM32G030F6P6">
   <img 
-    src="image.png" 
+    src="the_board.png" 
+    alt="Image of STM32G030F6P6" 
+    title="Image of STM32G030F6P6"
+    style="max-width: 100%; height: auto; cursor: pointer;"
+  />
+</a>
+ <br>
+and this is the ST-Link
+<a href="stlink.png" data-lightbox="post-gallery" data-title="alt text">
+  <img 
+    src="stlink.png" 
     alt="alt text" 
     title="alt text"
     style="max-width: 100%; height: auto; cursor: pointer;"
   />
 </a>
 </p>
+<p>now we need to connect the <strong>VCC, GND, CLK and DIO</strong> of the board
+to the same pins of the ST-LINK and, here the board uses 3.3v and ST link have multiple voltage support
+hence be careful while using it</p>
+<p>also after a google search, yes google search not <em>ChatGPT</em> search, i got a link to a github repository,
+of we act studio, apparently they don&rsquo;t have any websites, they have the entire details in this <strong><a href="https://github.com/WeActStudio/WeActStudio.STM32G0xxC0xxCoreBoard">repository</a></strong>, it
+contained the Datasheet, the docs and examples, but i believe that its ment for someone with enough knowledge for STM 32 Boards
+because i couldn&rsquo;t understand shit, there is a</p>
 
             </div>
         </article></main>
